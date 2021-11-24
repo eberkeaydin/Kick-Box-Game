@@ -16,10 +16,10 @@ public class Fighter {
 
     public int hit(Fighter foe) {
         System.out.println("------------");
-        System.out.println(this.name + " => " + foe.name + " " +  this.damage + " hasar vurdu.");
+        System.out.println(this.name + " => " + foe.name + " " +  this.damage + " inflict hit damage");
 
         if (foe.dodge()) {
-            System.out.println(foe.name + " gelen hasarı savurdu.");
+            System.out.println(foe.name + " dodges the incoming damage of foe's punch");
             return foe.health;
         }
 
