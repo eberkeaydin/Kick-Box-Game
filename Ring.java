@@ -15,7 +15,7 @@ public class Ring {
 
         if (checkWeight()) {
             while (f1.health > 0 && f2.health > 0) {
-                System.out.println("======== YENİ ROUND ===========");
+                System.out.println("======== NEW ROUND ===========");
 
                 double randomChance = Math.random() * 2;
                 if (randomChance <= 1){
@@ -34,7 +34,8 @@ public class Ring {
             }
 
         } else {
-            System.out.println("Sporcuların ağırlıkları uyuşmuyor.");
+            System.out.println("\n" +
+                    "The weights of the boxers do not match.");
         }
 
 
@@ -46,10 +47,10 @@ public class Ring {
 
     public boolean isWin() {
         if (f1.health <= 0) {
-            System.out.println("Maçı Kazanan : " + f2.name);
+            System.out.println("Winner is : " + f2.name + " !!!");
             return true;
         } else if (f2.health <= 0){
-            System.out.println("Maçı Kazanan : " + f2.name);
+            System.out.println("Winner is : " + f2.name + " !!!");
             return true;
         }
 
@@ -59,7 +60,7 @@ public class Ring {
 
     public void printScore() {
         System.out.println("------------");
-        System.out.println(f1.name + " Kalan Can \t:" + f1.health);
-        System.out.println(f2.name + " Kalan Can \t:" + f2.health);
+        System.out.println(f1.name + " health remained \t:" + f1.health);
+        System.out.println(f2.name + " health remained \t:" + f2.health);
     }
 }
